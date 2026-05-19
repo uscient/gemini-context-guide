@@ -1,77 +1,46 @@
 # Contributing
 
-Thank you for your interest in improving this guide.
+This repository is currently **not accepting outside contributions**.
 
-This repository is in early incubation. Issues, suggestions, corrections, and real-world observations are welcome. Pull requests may be limited, delayed, or declined while the guide is being stabilized.
-
-## What this project accepts
-
-Good contributions include:
-
-- corrections to unclear instructions
-- reports of confusing Gemini behavior
-- safer wording for prompts or scope checks
-- documentation improvements
-- examples of context-scope problems
-- links to official Google documentation when relevant
-- accessibility or readability improvements
-
-## What this project is not for
-
-This project is not for:
-
-- legal advice
-- privacy guarantees
-- security guarantees
-- claims that Gemini, Notebooks, chats, or connected apps are isolated
-- unofficial speculation presented as fact
-- product complaints without reproducible behavior
-- instructions that require users to expose private data
-
-## Contribution guidelines
-
-When suggesting changes:
-
-1. Keep the language plain and understandable.
-2. Avoid project-specific jargon.
-3. Do not imply this project is affiliated with Google.
-4. Prefer official Google documentation for factual product behavior.
-5. Separate observed behavior from assumptions.
-6. Avoid claiming that any prompt or instruction guarantees isolation.
-7. Do not include private personal data, private Workspace data, credentials, screenshots with sensitive information, or confidential project material.
-
-## Reporting context issues
-
-If you are reporting unexpected Gemini behavior, please include:
-
-- where it happened: normal chat, Notebook, Gem, Chrome, YouTube, Workspace app, or another surface
-- what source you expected Gemini to use
-- what outside information Gemini appeared to use
-- whether the answer included source or scope information
-- whether the behavior was reproducible
-
-Do not include private content. Replace names, projects, files, people, companies, and sensitive details with fake examples.
+The guide is public so people can read, copy, adapt, and use it under the repository license. Public visibility does not mean the project is open for outside edits, pull requests, or shared maintenance.
 
 ## Pull requests
 
-Pull requests may be accepted for small, clear improvements.
+Please do not open pull requests.
 
-Larger changes should usually start as an issue first, especially if they affect:
+Pull requests may be closed without review.
 
-- global instructions
-- Notebook instructions
-- warning language
-- license/disclaimer text
-- claims about Google product behavior
-- repo structure
+## Issues
 
-The maintainer may edit, rewrite, split, or decline contributions to keep the guide focused and cautious.
+Issues may be disabled or limited.
 
-## Licensing of contributions
+If issues are enabled, they are for reporting clear errors in the guide, such as:
 
-Except where otherwise noted, this repository is licensed under the Creative Commons Attribution 4.0 International License.
+- broken links
+- outdated references to official documentation
+- unclear wording
+- factual corrections
 
-By submitting documentation, prompts, examples, instructions, or other text to this repository, you agree that your contribution may be distributed under the repository license.
+Issues are not for:
+
+- requesting new features
+- asking for personal Gemini support
+- debating Google product policy
+- submitting private examples
+- adding project-specific workflows
+- contributing new prompt systems
+
+## Private or sensitive information
+
+Do not post private information, screenshots with personal data, Workspace data, email contents, account details, credentials, confidential project material, or anything you would not want public.
+
+Use fake examples only.
+
+## License
+
+The repository license allows people to copy, adapt, and reuse the guide material with attribution.
+
+That license does not create a right to modify this repository directly or participate in project governance.
 
 ## Unofficial status
 
