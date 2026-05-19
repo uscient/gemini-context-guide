@@ -1,52 +1,113 @@
-# Chrome and YouTube Notes
+# Chrome and YouTube Use
 
-Chrome and YouTube are useful with Gemini, but they can blur source boundaries.
+Chrome and YouTube are common places where Gemini can be useful.
 
-This guide does not try to replace Google’s documentation. Check current Google settings and help pages before relying on any specific behavior.
+They are also common places where source boundaries become unclear.
 
-## Chrome
+## The simple rule
 
-Gemini in Chrome may be able to use page or tab content depending on account, browser, product, and settings.
+For Chrome, YouTube, page, video, or browser-tab questions:
 
-Recommended practice:
+> Use only the specific source I provide.
 
-- Treat browser tabs as explicit sources.
-- Do not assume a Chrome chat is current-chat-only.
-- If possible, avoid sharing current tabs by default unless you want that behavior.
-- Ask Gemini to list which tab, page, or source it used.
-- Avoid using Chrome/page context for sensitive account pages unless necessary.
+That source might be:
+
+- a YouTube link
+- a video transcript
+- a webpage
+- the current browser tab
+- selected browser tabs
+- a pasted excerpt
+- an uploaded file
+
+## Gemini in Chrome
+
+Google’s Chrome help says Gemini in Chrome has permissions including:
+
+- precise location
+- microphone
+- Share current tab by default
+- Let Gemini browse for you
+
+Official reference:
+
+- https://support.google.com/chrome/answer/16283624
+
+Suggested user actions:
+
+- Review Gemini in Chrome settings.
+- Consider turning off “Share current tab by default” if you want tab sharing to be deliberate.
+- Treat the current tab as a source when Gemini uses it.
+- Do not leave sensitive tabs open if you do not want them included.
 
 ## YouTube
 
-For ordinary YouTube video questions, the safest working rule is:
+Google’s Gemini help says Gemini uses public information from YouTube to help users find videos and understand video content. The same page says users can connect Gemini and YouTube for personalized experiences based on YouTube History.
 
-> Use only the specific video, link, transcript, or pasted content I provide.
+Official reference:
 
-Recommended practice:
+- https://support.google.com/gemini/answer/16622858
 
-- Ask for “based only on this video” when you want a source-faithful summary.
-- Ask for “outside-the-video concerns” only when you want general reasoning beyond the video.
-- Do not let YouTube History or account personalization become part of the answer unless you explicitly want that.
-- Check that the answer ends with “provided source only” when that is what you requested.
+Suggested user actions:
 
-## Good answer pattern
+- For a normal video summary, provide the specific video link.
+- Ask Gemini to use only that video/link/transcript.
+- Avoid using YouTube History unless you intentionally want account-based personalization.
+- Check that the answer says “provided source only.”
+
+## Good prompt for YouTube
 
 ```markdown
-## Information used
-- Provided YouTube video/link/transcript
+Summarize this YouTube video.
 
+Use only the video/link/transcript I provide. Do not use my YouTube History, Chrome history, Search history, previous chats, saved information, connected apps, or project context.
+
+End with:
+
+## Information used
+List what you used.
+
+## Scope check
+Say one of:
+- provided source only
+- current chat only
+- other project information may be relevant, but not used
+- I may have used outside information
+- I cannot verify
+```
+
+## Good follow-up prompt
+
+```markdown
+Based only on the provided video, what does the video say about risks or downsides?
+
+Do not add outside concerns unless I ask for them.
+```
+
+## Separate outside analysis
+
+If you want general reasoning beyond the video, say so explicitly:
+
+```markdown
+Now add a separate section called “Outside-the-video concerns.”
+
+Use only general reasoning and official sources if needed. Do not use my projects, previous chats, saved information, YouTube History, Chrome history, Search history, or connected apps.
+```
+
+## Good scope labels
+
+When Gemini used a provided video or page, the best label is:
+
+```markdown
 ## Scope check
 provided source only
 ```
 
-## Suspect answer pattern
+Not:
 
 ```markdown
-## Information used
-- Your prior chats
-- Your projects
-- Your preferences
-- YouTube history
+## Scope check
+current chat only
 ```
 
-This may be fine if you asked for it. It is suspect if you only asked about one video.
+The link, video, page, tab, file, or transcript is a source.
